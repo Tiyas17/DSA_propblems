@@ -1,0 +1,41 @@
+set(i)->arr[i]=1
+unset(i)->arr[i]=0
+check(i)->arr[i]==1
+flip(i)->if(arr[i]==1)arr[i]=0 else arr[i]=1
+reverse->reverse(arr,arr+n)
+count->Sum of arr
+x^0=x
+
+->set(x,i)=x|(1<<i)
+->unset(x,i)=x&(~(1<<i))
+->check(x,i)=(x>>i)&1 ----> if 0 No if 1 Yes
+->flip(x,i)=x^(1<<i) //0^1=1 0^0=0
+->reverse
+->Count
+for(i=0;i<32;i++)
+{
+    if(check(x,i))
+    ans++;
+}
+
+count(x)
+{
+    if(x==0)
+    return 0;
+
+    return count(x/2) + x&1;
+    //NOTE: x/2 is same as x>>1
+}
+
+NOTE: x=x&(x-1) setting the rigthmost set bit to 0
+
+int cnt2(int x) //count number of set bits in both negative and positive number
+{
+    int ans=0;
+    while(x)
+    {
+        ans++;
+        x=x&(x-1);
+    }
+    return ans;
+}

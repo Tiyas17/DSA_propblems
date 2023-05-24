@@ -1,0 +1,26 @@
+#define long long ll
+
+how you get pi value
+-> long double pi=acos(-1);
+
+cout<<fixed<<setprecision(9)<<PI*R*R<<endl;
+
+ cout << res << endl;
+                // cout << "res substr (n-1,1)" << res.substr(n - 1, 1) << endl;
+                // cout << "res substr (0,n-1)" << res.substr(0, n - 1) << endl;
+                -->res = res[n - 1] + res.substr(0, n - 1);
+
+int lcm(int a, int b)
+{
+    int g=__gcd(a, b);
+    return a/g*b;
+}
+
+string s1="0.3686"
+float a;
+stringstream ss;
+ss<<s1;
+ss>>a;
+cout<<a;
+
+
